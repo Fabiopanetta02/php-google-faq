@@ -75,20 +75,58 @@ $faqs = [
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Php-google-faq</title>
+    <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
+      <div class="headerContainer coloreScritte">
+        <div class="header_section">
+          <a href="#"><img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_74x24dp.png" alt="Google"></a>
+          <a class="nomeSezione dimensioneTestoPrincipale"> Privacy e termini </a>
+        </div>
+        <div class="header_bar">
+          <div class="header_list">
+            <ul>
+              <li>Introduzione</li>
+              <li>Norme sulla privacy</li>
+              <li>Termini di servizio</li>
+              <li>Tecnologie</li>
+              <li>Domande frequenti</li>
+            </ul>
+          </div>
+          <div class="header_account">
+            <span>Account Google</span>
+          </div>
+        </div>
+      </div>
     </header>
-    <main>
-        <?php foreach($faqs as $value) :?>
-            <section>
-                <h2><?= $value['domanda']?></h2>
-                <div><?= $value['risposta']?></div>
-            </section>
-        <?php endforeach?>
+    <main class="container">
+        <div class="containerFaq">
+            <?php foreach($faqs as $value) :?>
+                <section>
+                    <h2 class="domanda dimensioneTestoPrincipale"><?= $value['domanda']?></h2>
+                    <div class="risposta dimensioneTestoFaq"><?= $value['risposta']?></div>
+                </section>
+            <?php endforeach?>
+        </div>
     </main>
     <footer>
-    </footer>
+        <div class="footerContainer">
+          <div class="footer_left">
+            <a href="#">Google</a>
+            <a href="#">Tutto su Google</a>
+            <a href="#">Privacy</a>
+            <a href="#">Termini</a>
+          </div>
+          <div class="footer_right">
+            <select id="language">
+              <option>Italiano</option>
+              <option>English</option>
+              <option>Espanol</option>
+            </select>
+          </div>
+        </div>
+      </footer>
 </body>
 </html>
